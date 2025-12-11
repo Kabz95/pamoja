@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow users to read and write to their own document in the /users collection.
+    // This rule is critical for the app to function after login.
+    match /users/{userId} {
+      allow read, update, write: if request.auth != null && request.auth.uid == userId;
+      // Disallow creating a document if one already exists for that user ID.
+      // `create` is implicitly covered by `write` but we are being explicit.
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // By default, deny all other reads and writes in the database for security.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

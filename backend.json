@@ -1,0 +1,85 @@
+
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user's profile in the Pamoja app.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the UserProfile entity, matches Firebase Auth UID."
+        },
+        "username": {
+          "type": "string",
+          "description": "The user's chosen username."
+        },
+        "email": {
+          "type": "string",
+          "description": "The user's email address.",
+          "format": "email"
+        },
+        "nickname": {
+          "type": "string",
+          "description": "The user's display name, which can be different from their username."
+        },
+        "dateJoined": {
+          "type": "string",
+          "description": "The date and time the user joined the app.",
+          "format": "date-time"
+        },
+        "lastLogin": {
+          "type": "string",
+          "description": "The date and time of the user's last login.",
+          "format": "date-time"
+        },
+        "avatarId": {
+            "type": "string",
+            "description": "The ID of the user's chosen animated avatar."
+        },
+        "penpalIds": {
+            "type": "array",
+            "description": "A list of user IDs that this user is connected with as pen pals.",
+            "items": {
+                "type": "string"
+            }
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "dateJoined"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous",
+      "google.com",
+      "apple.com"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores the user's profile data.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to the Firebase Auth UID."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to manage user profiles securely and efficiently. We leverage path-based ownership for user profiles stored in `/users/{userId}` to ensure data privacy."
+  }
+}

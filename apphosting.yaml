@@ -1,0 +1,16 @@
+
+# Specifies the version of the App Hosting configuration.
+specVersion: v1alpha1
+
+# Defines the runtime environment for the backend.
+# The `run` command is automatically inferred for Next.js frameworks.
+runtime: nodejs20
+
+# Sets the minimum and maximum number of server instances for autoscaling.
+runConfig:
+  minInstances: 0
+  maxInstances: 10
+
+# Lists the custom domains associated with this backend.
+customDomains:
+  - pamoja.akili.space

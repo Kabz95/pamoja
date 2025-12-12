@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "penpal-1",
+      "description": "A friendly looking person smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2NTEzNTkyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "penpal-2",
+      "description": "A person writing a letter.",
+      "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3cml0aW5nJTIwbGV0dGVyfGVufDB8fHx8MTc2NTE2NjQ1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "writing letter"
+    },
+    {
+      "id": "penpal-3",
+      "description": "A person outdoors, looking thoughtful.",
+      "imageUrl": "https://images.unsplash.com/photo-1463062511209-f7aa591fa72f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBuYXR1cmV8ZW58MHx8fHwxNzY1MTI2MTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person nature"
+    },
+    {
+      "id": "penpal-4",
+      "description": "A person with a warm, inviting expression.",
+      "imageUrl": "https://images.unsplash.com/photo-1603245469144-a4a0772b5734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3YXJtJTIwc21pbGV8ZW58MHx8fHwxNzY1MTg0MTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "warm smile"
+    }
+  ]
+}
